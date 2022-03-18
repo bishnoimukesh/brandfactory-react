@@ -1,0 +1,26 @@
+.card-horizontal-container{
+    border-radius: 0.5em;
+    margin: 0.5em;
+}
+
+.cart-heading{
+    display: flex;
+    justify-content: center;
+}
+.cart-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-container{
+    display: flex;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+}
+
+.item-price{
+    display: flex;
+    justify-content: space-between;
+}
