@@ -1,0 +1,57 @@
+/* .links-container{
+    display: none;
+} */
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-card-title{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+.login-card{
+    width: 20em;
+    padding: 1em;
+    line-height: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0 0.1em 0.5em 0.1em var(--primary-font-color)
+}
+
+.login-form{
+    line-height: 1.2em;
+
+}
+.login-form-group{
+    margin: 1.5em 0;
+}
+.input{
+    color: var(--primary-font-color);
+    width: 90%;
+    border-radius: 0.5em;
+    border: 2px solid var(--success-background-color);
+    padding: 0.7em;
+    outline: none;
+}
+
+.form-link{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.7;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-font-color);
+    transition: 0.5s;
+}
+
+.login-form-checkbox{
+    margin: 0.5em 0;
+}
