@@ -18,25 +18,23 @@ const postWishlist = async(data, token) =>{
             headers: {authorization: token}
         })
         const wishlist = res.data.wishlist;
-        console.log("wishlist aaya hai", wishlist);
+        toast.success(<p>Item added to Wishlist.</p>)
         return wishlist;
     } catch (error) {
-        console.log("wishlist nhi aara : ", error);
+        toast.error(<p>Failed to add item to wishlist.</p>)
     }
 }
 
 const deleteWishlist = async(data, token) =>{
-    console.log(data, token)
     try {
         const res = await axios.delete(`/api/user/wishlist/${data._id}`, {
             headers: {authorization: token}
         })
         const wishlist = res.data.wishlist;
-        toast.warn(<p>Item removed from Cart.</p>)
-        console.log("wishlist aaya hai", wishlist);
+        toast.warn(<p>Item removed from Wishlist.</p>)
         return wishlist;
     } catch (error) {
-        console.log("wishlist nhi aara : ", error);
+        toast.error(<p>Failed to remove item from wishlist.</p>)
     }
 }
 
@@ -46,10 +44,10 @@ const postToCart = async(data, token) =>{
             headers: {authorization: token}
         })
         const cart = res.data.cart;
-        console.log("cart mei saman aaya hai", cart);
+        toast.success(<p>Item added in Cart.</p>)
         return cart;
     } catch (error) {
-        console.log("cart mei saman nhi aara : ", error);
+        toast.error(<p>Failed to add Item in Cart.</p>)
     }
 }
 
@@ -61,10 +59,10 @@ const increaseCartItem = async(data, token) =>{
             headers: {authorization: token}
         })
         const cart = res.data.cart;
-        console.log("cart mei saman ki sankhya badhi hai", cart);
+        toast.success(<p>Item quantity increased.</p>)
         return cart;
     } catch (error) {
-        console.log("cart mei saman ki sankhya nhi badhi h : ", error);
+        toast.error(<p>Item quantity not increased.</p>)
     }
 }
 
@@ -76,10 +74,10 @@ const decreaseCartItem = async(data, token) =>{
             headers: {authorization: token}
         })
         const cart = res.data.cart;
-        console.log("cart mei saman ki sankhya ghati hai", cart);
+        toast.success(<p>Item quantity decreased.</p>)
         return cart;
     } catch (error) {
-        console.log("cart mei saman ki sankhya nhi ghati h : ", error);
+        toast.error(<p>Item quantity not decreased.</p>)
     }
 }
 
@@ -89,10 +87,10 @@ const deleteCartItem = async(data, token) =>{
             headers: {authorization: token}
         })
         const cart = res.data.cart;
-        console.log("cart ka saman delete kiya hai", cart);
+        toast.success(<p>Item removed from cart.</p>)
         return cart;
     } catch (error) {
-        console.log("cart ka saman delete nhi hua h : ", error);
+        toast.error(<p>Item not removed from cart.</p>)
     }
 }
 
