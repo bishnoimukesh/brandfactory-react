@@ -22,13 +22,14 @@ https://user-images.githubusercontent.com/37878172/155026925-7acf3808-b71c-4156-
 Clone the project
 
 ```bash
-  git clone https://github.com/bishnoimukesh/brand-factory.git
+  git clone https://github.com/bishnoimukesh/ecomm-react.git
+  
 ```
 
 Go to the project directory
 
 ```bash
-  cd brand-factory
+  cd ecomm-react
 ```
 
 Open project
