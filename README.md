@@ -35,7 +35,7 @@ Go to the project directory
 Open project
 
 ```bash
-  open index.html
+  yarn start
 ```
 
 Start the server
