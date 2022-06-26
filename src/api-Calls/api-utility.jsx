@@ -73,7 +73,7 @@ const decreaseCartItem = async(data, token) =>{
             headers: {authorization: token}
         })
         const cart = res.data.cart;
-        toast.success(<p>Item quantity decreased.</p>)
+        toast.warn(<p>Item quantity decreased.</p>)
         return cart;
     } catch (error) {
         toast.error(<p>Item quantity not decreased.</p>)
@@ -86,7 +86,7 @@ const deleteCartItem = async(data, token) =>{
             headers: {authorization: token}
         })
         const cart = res.data.cart;
-        toast.success(<p>Item removed from cart.</p>)
+        toast.warn(<p>Item removed from cart.</p>)
         return cart;
     } catch (error) {
         toast.error(<p>Item not removed from cart.</p>)
