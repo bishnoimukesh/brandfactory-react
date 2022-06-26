@@ -86,7 +86,7 @@ const deleteCartItem = async(data, token) =>{
             headers: {authorization: token}
         })
         const cart = res.data.cart;
-        toast.danger(<p>Item removed from cart.</p>)
+        toast.warn(<p>Item removed from cart.</p>)
         return cart;
     } catch (error) {
         toast.error(<p>Item not removed from cart.</p>)
