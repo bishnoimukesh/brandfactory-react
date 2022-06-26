@@ -6,17 +6,14 @@ import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 const SignUpPage = () => {
-    const {authState, authDispatch} = useAuthContext();
+    const {authDispatch} = useAuthContext();
     const [signUpState, signUpDispatch] = useReducer(signUpReducer, {firstName:"", lastName:"", email: "", password: "", rePassword: ""});
     const {firstName, lastName, email, password} = signUpState;
     const navigate = useNavigate();
     const submitHandler = async(e, firstName, lastName, email, password) => {
         e.preventDefault();
         try {
-            console.log(firstName, lastName, email, password);
             const res = await axios.post("api/auth/signup", {firstName, lastName, email, password})
-            console.log(res);
-
             localStorage.setItem("token", res.data.encodedToken);
             localStorage.setItem("user", JSON.stringify(res.data.createdUser));
             authDispatch({type: "TOKEN_RECEIVED", payload: res.data.encodedToken});

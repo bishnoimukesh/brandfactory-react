@@ -5,10 +5,9 @@ const getData = async() =>{
     try {
         const res = await axios.get("/api/products")
         const data = res.data.products;
-        console.log("data aaya hai", data);
         return data;
     } catch (error) {
-        console.log("product nhi aara : ", error);
+        console.log("Error : ", error);
     }
 }
 

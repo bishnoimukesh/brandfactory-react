@@ -8,14 +8,13 @@ import axios from 'axios';
 
 
 const LoginPage = () => {
-    const {authState, authDispatch} = useAuthContext();
+    const { authDispatch} = useAuthContext();
     const [loginState, loginDispatch] = useReducer(loginReducer, {email: "", password: ""});
     const {email, password} = loginState;
     const navigate = useNavigate();
     const submitHandler = async(e, email, password) => {
         e.preventDefault();
         try {
-            console.log(email, password);
             const res = await axios.post("api/auth/login", {email, password})
             localStorage.setItem("token", res.data.encodedToken);
             localStorage.setItem("user", JSON.stringify(res.data.foundUser));

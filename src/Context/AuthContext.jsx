@@ -6,7 +6,6 @@ const AuthProvider = ({children}) => {
     const tokenDetails = localStorage.getItem("token") || "";
     const [authState, authDispatch] = useReducer(authReducer, {isLogin: !!tokenDetails,
         token: tokenDetails});
-        console.log(authState.isLogin, authState.token);
     return <AuthContext.Provider value={{authState, authDispatch}}>
         {children}
     </AuthContext.Provider>;

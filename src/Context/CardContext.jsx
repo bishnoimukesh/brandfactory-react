@@ -1,4 +1,4 @@
-import React, {useContext, useState, createContext, useReducer, useEffect} from 'react';
+import React, {useContext, createContext, useReducer, useEffect} from 'react';
 import {addToCartReducer, getDataReducer} from './../Reducer/addToCartReducer';
 import {wishListReducer} from './../Reducer/wishListReducer';
 import {filterReducer} from './../Reducer/filterReducer';
@@ -16,7 +16,6 @@ const CartProvider = ({children}) => {
     useEffect(() => {
         (async () => {
         const productData = await getData();
-        console.log(productData);
         getProductDispatch({type: "GET_DATA", payload: productData});
     })();
     }, []);

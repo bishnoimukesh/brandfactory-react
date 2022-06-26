@@ -7,7 +7,6 @@ import {PriceCard} from './../../components/Card/PriceCard';
 
 const CartPage = () => {
     const {cartState:{cart}} = useCartContext();
-    // console.log(cart);
     
     return (
         <>

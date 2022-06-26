@@ -4,12 +4,10 @@ import { calculatePrice, calculateFinalPrice, calculateDeliveryCharges  } from '
 
 const PriceCard = () => {
     const {cartState:{cart}} = useCartContext();
-    // console.log(cart);
     const totalPrice = calculatePrice(cart)
     const finalPrice = calculateFinalPrice(totalPrice)
     const deliveryCharges = calculateDeliveryCharges(finalPrice)
 
-    console.log(totalPrice, finalPrice, deliveryCharges);
     return (
         <div className="card-container">
                         <div className="card">

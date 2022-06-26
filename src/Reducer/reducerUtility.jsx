@@ -4,7 +4,6 @@ const filterBy = (productData, filterByRating, filterByCategory, filterBySortBy,
         filteredProducts = filteredProducts.filter(product => Number(product.rating.rate) >= filterByRating);
     }
     if(filterByCategory.length > 0){
-        console.log(filterByCategory);
         filteredProducts = filteredProducts.filter(product => filterByCategory.includes(product.category));
     }
     if(filterBySortBy !== ""){

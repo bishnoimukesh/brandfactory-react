@@ -7,8 +7,8 @@ import { increaseCartItem, decreaseCartItem, deleteCartItem, postWishlist } from
 const VerticalCard = (props) => {
 
     const data = props.data;
-    const {authState:{token}, authDispatch} = useAuthContext();
-    const {cartState:{cart}, cartDispatch, wishState:{wishList}, wishDispatch} = useCartContext();
+    const {authState:{token}} = useAuthContext();
+    const { cartDispatch, wishState:{wishList}, wishDispatch} = useCartContext();
     const deleteCartHandler = () => {
         cartDispatch({type: "REMOVE_FROM_CART", payload: data});
         deleteCartItem(data, token);

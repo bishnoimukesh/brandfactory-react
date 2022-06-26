@@ -7,7 +7,7 @@ import {postWishlist, deleteWishlist, postToCart} from '../../api-Calls/api-util
 
 
 const Card = (props) => {
-    const {authState:{token, isLogin}, authDispatch} = useAuthContext();
+    const {authState:{token, isLogin}} = useAuthContext();
     const navigate = useNavigate();
     const data = props.data;
     const {cartState:{cart}, cartDispatch, wishState:{wishList},wishDispatch} = useCartContext();
