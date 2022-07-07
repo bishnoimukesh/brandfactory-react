@@ -55,11 +55,7 @@
 /* <--- Card ----> */
 
 .product-scroll-container{
-    width: 100%;
-    height: fit-content;
-    padding: 0 2em;
     display: flex;
-    flex-direction: row !important;
     overflow-x: auto;
     scroll-behavior: smooth;
 }

@@ -6,7 +6,6 @@ import {SignUpPage} from './pages/SignUpPage/SignUpPage';
 import {CartPage} from './pages/CartPage/CartPage';
 import {WishListPage} from './pages/WishListPage/WishListPage';
 import {PrivateRoute} from './components/PrivateRoute/PrivateRoute';
-// import Data from './data/data.json';
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
